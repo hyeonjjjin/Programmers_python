@@ -22,18 +22,85 @@ def solution12(n):
         return -1
 
 
+MAX_QSIZE = 100
+
+
+class CircularQueue:
+    def __init__(self):
+        self.front = 0
+        self.rear = 0
+        self.items = [None] * MAX_QSIZE
+
+    def isEmpty(self):
+        return self.front == self.rear
+
+    def isFull(self):
+        return self.front == (self.rear + 1) % MAX_QSIZE
+
+    def enqueue(self, item):
+        if not self.isFull():
+            self.rear = (self.rear + 1) % MAX_QSIZE
+            self.items[self.rear] = item
+
+    def dequeue(self):
+        if not self.isEmpty():
+            self.front = (self.front + 1) % MAX_QSIZE
+            return self.items[self.front]
+
+    def peek(self):
+        if not self.isEmpty():
+            return self.items[(self.front + 1) % MAX_QSIZE]
+
+
+def solution13(priorities, location):
+    cq = CircularQueue()
+    max_priorities = max(priorities)
+    cq.enqueue(priorities)  # ㄱㄴ?ㅇㅇ오호 ㄹㅇ 1도 기억안났다 생성저거 미쳣ㅅ다
+    # print(max_priorities)
+    # for i in range(len(priorities)):
+    # CircularQueue.enqueue(priorities)
+    # print("나야" + dic) ㅋㅋㅋㅋㅋ엥 왜 .//.....얼탱방구네
+    '''CircularQueue.enqueue(priorities)
+    i = 0
+    if priorities[i] == max:
+        CircularQueue.dequeue()
+'''
+    # print(0)
+    return 0
+
+
+
 class PJB:
-    def solution12(n):
-        return solution12(n)
+    def solution42587(self, priorities, location):
+        priority_set = list(set(priorities))
+        priority_set.sort(reverse=True)
+
+        cnt = 0
+
+        for priority in priority_set:
+            print(f"current priority: {priority}")
+
+            for i in range(0, len(priorities)):
+                print(f"current: {i} {priorities[i]}")
+                if priority <= priorities[i]:
+                    print("istrue")
+                    cnt += 1
+                if priority != priorities[i]:
+                    continue
+                if location == i:
+                    return cnt
 
 
-# 디스이즈 날먹이자식ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
-# ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ파이썬에서 class 처으모바 3점 획득 !
-# 나도파이썬안써서 잘몰라ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅎ통과??오롤ㄹ롤ㄹ다음문제!깃에 올려야돼1!!!!
-# 오저게 뭔답이야야답무ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ 어뭐야**되냐야뭐어ㅇ
-# 엇 습관적인 컨트롤제트 오늘 푸시 많이해서 앞에 커밋한거 색 연해졌어,, 앞에 연약해져서 맘에 안들아,, 오오오겁나찐해오올올 밑에 터미널일케해두되는거니
-# 케는중이이는느 난 안해봤는데 너 하길래 구거ㅕㅇ함ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ나
-# ㅋㅋㅋㅋㅋㅋㅋ
+def test42587(function):
+    priorities = [[2, 1, 3, 2], [1, 1, 9, 1, 1, 1]]
+    location = [2, 0]
+    result = []
+    for i in range(0, 2):
+        print(f"TestCase {i} input: {priorities[i]} {location[i]}")
+        print(function(priorities[i], location[i]))
 
-print(solution11(12345))
-print(solution12(3))
+
+# test42587(solution13)
+test42587(PJB().solution42587)
+
+# https://programmers.co.kr/learn/courses/30/lessons/42587
