@@ -69,6 +69,13 @@ def solution13(priorities, location):
     return 0
 
 
+# solution17
+a, b = map(int, input().strip().split(' '))
+l = ["*" for i in range(a)]
+for k in range(b):
+    print(''.join(l))
+print(a + b)
+
 
 class PJB:
     def solution42587(self, priorities, location):
@@ -101,6 +108,6 @@ def test42587(function):
 
 
 # test42587(solution13)
-test42587(PJB().solution42587)
+#test42587(PJB().solution42587)
 
 # https://programmers.co.kr/learn/courses/30/lessons/42587
