@@ -75,6 +75,8 @@ l = ["*" for i in range(a)]
 for k in range(b):
     print(''.join(l))
 print(a + b)
+answer = ('*'*a +'\n')*b
+print(answer)
 
 
 class PJB:
