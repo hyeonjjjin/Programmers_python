@@ -79,6 +79,10 @@ answer = ('*'*a +'\n')*b
 print(answer)
 
 
+def solsol(n):
+    return 'Even' if n % 2 == 0 else 'Odd'
+
+
 class PJB:
     def solution42587(self, priorities, location):
         priority_set = list(set(priorities))
