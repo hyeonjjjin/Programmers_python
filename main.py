@@ -83,6 +83,10 @@ def solsol(n):
     return 'Even' if n % 2 == 0 else 'Odd'
 
 
+def solution_l2_3(prices):
+    answer3 = []
+    return answer3
+
 class PJB:
     def solution42587(self, priorities, location):
         priority_set = list(set(priorities))
