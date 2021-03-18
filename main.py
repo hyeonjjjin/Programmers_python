@@ -87,6 +87,8 @@ def solution_l2_3(prices):
     answer3 = []
     return answer3
 
+
+
 class PJB:
     def solution42587(self, priorities, location):
         priority_set = list(set(priorities))
@@ -116,6 +118,8 @@ def test42587(function):
         print(f"TestCase {i} input: {priorities[i]} {location[i]}")
         print(function(priorities[i], location[i]))
 
+
+print(solution_l2_3([1, 2, 3, 2, 3]))
 
 # test42587(solution13)
 #test42587(PJB().solution42587)
