@@ -84,6 +84,7 @@ def solsol(n):
 
 
 def solution_l2_3(prices):
+
     answer3 = []
     return answer3
 
