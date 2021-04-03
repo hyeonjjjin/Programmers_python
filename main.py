@@ -55,16 +55,12 @@ class CircularQueue:
 def solution13(priorities, location):
     cq = CircularQueue()
     max_priorities = max(priorities)
-    cq.enqueue(priorities)  # ㄱㄴ?ㅇㅇ오호 ㄹㅇ 1도 기억안났다 생성저거 미쳣ㅅ다
+    cq.enqueue(priorities)
     # print(max_priorities)
     # for i in range(len(priorities)):
     # CircularQueue.enqueue(priorities)
     # print("나야" + dic) ㅋㅋㅋㅋㅋ엥 왜 .//.....얼탱방구네
-    '''CircularQueue.enqueue(priorities)
-    i = 0
-    if priorities[i] == max:
-        CircularQueue.dequeue()
-'''
+
     # print(0)
     return 0
 
@@ -84,7 +80,6 @@ def solsol(n):
 
 
 def solution_l2_3(prices):
-
     answer3 = []
     return answer3
 
