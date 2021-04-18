@@ -51,7 +51,6 @@ class CircularQueue:
         if not self.isEmpty():
             return self.items[(self.front + 1) % MAX_QSIZE]
 
-
 def solution13(priorities, location):
     cq = CircularQueue()
     max_priorities = max(priorities)
