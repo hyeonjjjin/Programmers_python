@@ -82,6 +82,10 @@ def solution_l2_3(prices):
     answer3 = []
     return answer3
 
+#전화번호 목록(해시) 블로그XX
+def solution_l2_4():
+    return 0
+
 
 
 class PJB:
