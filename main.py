@@ -51,6 +51,7 @@ class CircularQueue:
         if not self.isEmpty():
             return self.items[(self.front + 1) % MAX_QSIZE]
 
+
 def solution13(priorities, location):
     cq = CircularQueue()
     max_priorities = max(priorities)
@@ -70,7 +71,7 @@ l = ["*" for i in range(a)]
 for k in range(b):
     print(''.join(l))
 print(a + b)
-answer = ('*'*a +'\n')*b
+answer = ('*' * a + '\n') * b
 print(answer)
 
 
@@ -82,10 +83,13 @@ def solution_l2_3(prices):
     answer3 = []
     return answer3
 
-#전화번호 목록(해시) 블로그XX
-def solution_l2_4():
-    return 0
 
+# 전화번호 목록 (해시) 블로그XX
+def solution_l2_4(phone_book):
+    return True
+
+
+print(solution_l2_4(["119", "97674223", "1195524421"]))
 
 
 class PJB:
@@ -121,6 +125,6 @@ def test42587(function):
 print(solution_l2_3([1, 2, 3, 2, 3]))
 
 # test42587(solution13)
-#test42587(PJB().solution42587)
+# test42587(PJB().solution42587)
 
 # https://programmers.co.kr/learn/courses/30/lessons/42587
