@@ -86,6 +86,8 @@ def solution_l2_3(prices):
 
 # 전화번호 목록 (해시) 블로그XX
 def solution_l2_4(phone_book):
+
+    for phonenum phone_book:
     return True
 
 
